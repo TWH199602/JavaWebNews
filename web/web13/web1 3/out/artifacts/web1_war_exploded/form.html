@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="服务器端地址，一段java代码，用来处理表单数据(value属性值)"
+    method="post/get 表单数据提交到服务器的方式方法">
+    用户名：<input type="text" name="username" value="默认值"/>
+    <br/>
+    密码：<input type="password" name="password"/>
+    <br/>
+    性别：(多选一，同一组的单选按钮name属性保持一致)
+    <input type="radio" name="sex" value="male" checked="checked"/>男
+    <input type="radio" name="sex" value="female"/> 女
+    <br/>
+    <br/>
+    兴趣：(多选，同一组的checkbox的name属性保持一致)
+    <input type="checkbox" name="fav" value="" checked="checked"/>球类
+    <input type="checkbox" name="fav"/>阅读
+    <input type="checkbox" name="fav"/>影视
+<br/>
+    <!--
+        select :
+                size : 页面中同时显示多少个选项
+                multiple ：默认select是多选一的，加上multiple，
+                            就可以多选（需要配合control）
+    -->
+    <select name="cars" size="5" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat" selected="selected">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+    <br/>
+    <textarea rows="10" cols="30" readonly="readonly">
+文本域
+和文本框的区别是，多行输入的，文本框只能是一行
+    </textarea>
+    <br/>
+    隐藏域，页面中不显示任何值，表单提交的时候，把value值发给服务器
+    <input type="hidden" value="" name=""/>
+    <br/>
+    文件域：
+    <input type="file" name=""/>
+    <br/>
+    <input type="submit" value="按钮显示的文本"/>
+    <input type="button" value="默认无用处，需要编写代码(js)，给它指定任务"/>
+    <input type="reset" value="重置，清空输入元素中的内容,将所有元素状态恢复到默认值"/>
+    <hr/>
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <br/>
+    Birthday (date and time):
+    <input type="datetime-local" name="bdaytime">
+    <br/>
+        Birthday (date and time):
+        <input type="datetime" name="abdaytime">
+
+</form>
+</body>
+</html>
