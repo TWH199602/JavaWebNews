@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加商品页</title>
+    <style>
+        div, p, input, th, tr, td, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            width: 1300px;
+            height: 800px;
+            /*background-color: red;*/
+            margin: 0 auto;
+        }
+
+        #title {
+            position: relative;
+            height: 40px;
+        }
+
+        #logout {
+            float: left;
+            position: absolute;
+            left: 1200px;
+            top: 10px;
+            border: blue 2px;
+            background-color: skyblue;
+            width: 60px;
+        }
+
+        #leftTitle {
+            float: left;
+            font-size: 30px;
+            color: grey;
+        }
+
+        #add {
+            margin: 0 auto;
+            width: 800px;
+            height: 600px;
+            /*background-color: red;*/
+        }
+
+        #addTitle {
+            font-size: 30px;
+            color: blue;
+        }
+
+        p {
+            margin-bottom: 4px;
+        }
+
+        .picture {
+            float: left;
+            border: 1px solid skyblue;
+        }
+
+        #desc {
+            clear: both;
+            margin-left: 53px;
+            position: relative;
+            top: 5px;
+        }
+
+        .desc {
+            float: left;
+        }
+
+        #submitAll {
+            clear: both;
+            position: relative;
+            top: 30px;
+            left: 70px;
+        }
+
+        .imgButton {
+            width: 100px;
+            height: 40px;
+            font-size: 15px;
+            color: white;
+            background-color: gray;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="main" class="divBody">
+    <!-- 标题div -->
+    <div id="title">
+        <div id="leftTitle">在线拍卖系统</div>
+        <div id="rightTitle">
+            <input id="logout" type="button" value="注销"/>
+        </div>
+    </div>
+
+    <!-- 水平线 -->
+    <div>
+        <hr/>
+    </div>
+
+    <!-- 主体 -->
+    <form>
+        <div id="add">
+            <!-- 拍卖品标题 -->
+            <p id="addTitle">拍卖品信息</p>
+            <!-- 拍卖品信息-->
+            <div id="addInformation" style="width: 260px; height: auto; text-align: right">
+                <p>名称：<input type="text"/></p>
+
+                <p>起拍价：<input type="text"/></p>
+
+                <p>底价：<input type="text"/></p>
+
+                <p>开始时间：<input type="text"/></p>
+
+                <p>结束时间：<input type="text"/></p>
+
+            </div>
+
+            <!-- 拍卖品图片 -->
+            <div style="margin-left: 4px; margin-top: 4px; margin-bottom: 4px">
+                <div style="float: left;">
+                    <p>拍卖品图片：</p>
+                </div>
+                <div class="picture" style="padding: 5px">
+                    <img src="images/ad20.jpg" width="100" height="100"/>
+                </div>
+                <div class="picture" style="margin-left: 4px">
+                    <input type="file" value="为选择任何图片" style="color: gray"/>
+                </div>
+            </div>
+
+            <!-- 拍卖品描述 -->
+            <div id="desc">
+                <div class="desc">
+                    描述：
+                </div>
+                <div class="desc">
+                    <textarea rows="10" cols="70"></textarea>
+                </div>
+            </div>
+
+            <div id="submitAll">
+                <input type="button" class="garyButton" value="保存"/>
+                <input type="button" class="garyButton" value="取消"/>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+</body>
+</html>

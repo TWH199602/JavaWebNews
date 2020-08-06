@@ -2,36 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>竞拍者登陆</title>
-    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
+    <title>竞拍者登陆页</title>
     <style type="text/css">
-        #div1{
-            width: 400px;
-            height: 200px;
-        }
-        #div2{
-            width: 400px;
-            height: 200px;
-            position: relative;
-            top:50px;
-            left: 100px;
-        }
-        img{
-            background-image: url("QQ20200804-163232.png");
-            position: absolute;
-            left: 100px;
-            top:-50px;
-        }
-        #div5{
-            width: 600px;
-            height: 200px;
-            background-color: red;
-            margin: 0 auto;
+        div {
+            width: 100%;
+            height: 400px;
         }
 
+        div #d1 {
+            margin-left: 350px;
+            width: 450px;
+            float: left;
+        }
+
+        div #d2 {
+            width: 350px;
+            height: 380px;
+            float: left;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
-
+<div>
+    <div id="d1">
+        <img style="margin-top: 42px" src="images/img1.jpg" alt="">
+    </div>
+    <div id="d2">
+        <form action="">
+            <p style="color: blueviolet;font-size: 20px;line-height: 100px;height: 50px">用户登录</p>
+            用户名：<input type="text" name="username" placeholder="常用邮箱"><br/><br/>
+            密码：&nbsp;&nbsp;&nbsp;<input type="password" name="password" placeholder="密码"><br/><br/>
+            验证码：<input style="width: 75px;" type="text" name="" placeholder="验证码"><img src="images/img2.jpg" alt=""><a
+                style="font-size: 5px" href="">看不清</a><br/>
+            <input style="width: 12px;height: 12px" type="checkbox">下次自动登录<br/><br/>
+            <input style="width: 120px;height:45px;background-image: url(images/butto.jpg);background-size: 100% 100%;color: white;font-size: 15px"
+                   type="submit" value="登陆">&nbsp;
+            <input style="width: 120px;height:45px;background-image: url(images/butto.jpg);background-size: 100% 100%;color: white;font-size: 15px"
+                   type="submit" value="注册">
+            <a href="">忘记密码？</a>
+        </form>
+    </div>
+</div>
 </body>
 </html>

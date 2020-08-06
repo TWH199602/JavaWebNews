@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div, p, input, th, tr, td, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            width: 1300px;
+            height: 800px;
+            /*background-color: red;*/
+            margin: 0 auto;
+        }
+
+        #title {
+            position: relative;
+            height: 40px;
+        }
+
+        #logout {
+            float: left;
+            position: absolute;
+            left: 1200px;
+            top: 10px;
+            border: blue 2px;
+            background-color: skyblue;
+            width: 60px;
+        }
+
+        #leftTitle {
+            float: left;
+            font-size: 30px;
+            color: grey;
+        }
+
+        #tableInformation {
+            float: left;
+            position: relative;
+        }
+
+        #t1 {
+            float: left;
+        }
+
+        #t2 {
+            position: absolute;
+            left: 1030px;
+            float: left;
+        }
+
+        .virtue {
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid skyblue;
+        }
+
+        .value {
+            width: 600px;
+            height: 30px;
+            text-align: left;
+            border: 1px solid skyblue;
+        }
+
+        #biddingInformation {
+            clear: both;
+            position: relative;
+            top: 40px;
+        }
+
+        #submitAll {
+            clear: both;
+            position: relative;
+            top: 30px;
+            /*left: 70px;*/
+        }
+
+        .imgButton {
+            width: 100px;
+            height: 40px;
+            font-size: 15px;
+            color: white;
+            background-image: url("images/butto.jpg");
+            border: none;
+        }
+
+        #record {
+            clear: both;
+            position: relative;
+            top: 100px;
+        }
+
+        #t3 {
+            float: left;
+        }
+
+        #t3 th, tr, td {
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid skyblue;
+        }
+
+    </style>
+</head>
+<body>
+<div id="main" class="divBody">
+    <!-- 标题div -->
+    <div id="title">
+        <div id="leftTitle">在线拍卖系统</div>
+        <div id="rightTitle">
+            <input id="logout" type="button" value="注销"/>
+        </div>
+    </div>
+
+    <!-- 水平线 -->
+    <div>
+        <hr/>
+    </div>
+
+
+    <div id="tableInformation">
+        <div id="t1">
+            <table style="border-collapse: collapse;">
+                <tr>
+                    <td class="virtue">名称：</td>
+                    <td class="value">花瓶</td>
+                </tr>
+                <tr>
+                    <td class="virtue">描述：</td>
+                    <td class="value">古董</td>
+                </tr>
+                <tr>
+                    <td class="virtue">开始时间：</td>
+                    <td class="value">2020-08-05 12:30:30</td>
+                </tr>
+                <tr>
+                    <td class="virtue">结束时间：</td>
+                    <td class="value">2020-08-05 13:30:30</td>
+                </tr>
+                <tr>
+                    <td class="virtue">起拍价：</td>
+                    <td class="value">2000</td>
+                </tr>
+            </table>
+        </div>
+        <div id="t2">
+            <img src="images/ad20.jpg" width="270" height="185">
+        </div>
+    </div>
+
+    <div id="biddingInformation">
+        <form>
+            <div style="border: 1px solid skyblue">
+                <p>
+                    出价：
+                    <input type="text">
+                    <input type="button" value="竞拍" style="width: 80px; height: 30px;
+                       background-color: steelblue; color: white; border: none">
+                </p>
+                <p style="color: red">不能低于最高竞拍价</p>
+            </div>
+            <div id="submitAll">
+                <input type="button" class="imgButton" value="刷新"/>
+                <input type="button" class="imgButton" value="返回列表"/>
+            </div>
+        </form>
+    </div>
+
+    <div id="record">
+        <p style="color: gray;"><strong>出价记录</strong></p>
+
+        <div id="t3">
+            <table style="border-collapse: collapse;">
+                <th>竞拍时间</th>
+                <th>竞拍价格</th>
+                <th>竞拍人</th>
+                <tr>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>4000.00</td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>4000.00</td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>4000.00</td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>4000.00</td>
+                    <td>张三</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

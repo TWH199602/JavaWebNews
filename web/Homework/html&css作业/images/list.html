@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拍卖品列表页</title>
+    <style>
+        div, p, input, th, tr, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            width: 1300px;
+            height: 800px;
+            /*background-color: red;*/
+            margin: 0 auto;
+        }
+
+        #title {
+            position: relative;
+            height: 40px;
+        }
+
+        #logout {
+            float: left;
+            position: absolute;
+            left: 1200px;
+            top: 10px;
+            border: blue 2px;
+            background-color: skyblue;
+            width: 60px;
+        }
+
+        #leftTitle {
+            float: left;
+            font-size: 30px;
+            color: grey;
+        }
+
+        #check {
+            position: relative;
+            height: 40px;
+            /*background-color: royalblue;*/
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .term {
+            width: 170px;
+            height: 20px;
+        }
+
+        #checkbutton {
+            width: 50px;
+            height: 30px;
+            /*background-color: blue;*/
+            color: white;
+            border: none;
+            font-size: 15px;
+            background-image: url("images/butto.jpg");
+        }
+
+        #list {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            margin-top: 5px;
+            /*background-color: blue;*/
+            border: 1px solid cornflowerblue;
+        }
+
+        #information {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .bidding {
+            color: red;
+            text-decoration: none;
+        }
+
+        #last {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            color: black;
+            /*background-color: red;*/
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .one {
+            background-color: cornflowerblue;
+        }
+
+        #information td, tr, th {
+            width: 150px;
+            height: 40px;
+            border: 1px solid skyblue;
+        }
+
+        #lastA {
+            width: 40%;
+            margin: 0 auto;
+        }
+
+        #lastA td, tr {
+            width: 10px;
+            height: 20px;
+        }
+
+        #lastA a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- 整体div -->
+<div id="main" class="divBody">
+    <!-- 标题div -->
+    <div id="title">
+        <div id="leftTitle">在线拍卖系统</div>
+        <div id="rightTitle">
+            <input id="logout" type="button" value="注销"/>
+        </div>
+    </div>
+    <!-- 查询div -->
+    <div id="check">
+        <hr/>
+        名称:<input type="text" class="term"/>
+        描述:<input type="text" class="term"/>
+        开始时间:<input type="text" class="term"/>
+        结束时间:<input type="text" class="term"/>
+        起拍价:<input type="text" class="term"/>
+        <input type="submit" value="查询" id="checkbutton">
+    </div>
+    <!-- 列表 -->
+    <div id="list">
+        <div>
+            <table id="information">
+                <th class="one">名称</th>
+                <th class="one">描述</th>
+                <th class="one">开始时间</th>
+                <th class="one">结束时间</th>
+                <th class="one">起拍价</th>
+                <th class="one">操作</th>
+                <tr>
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+                <tr class="one">
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+                <tr>
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+                <tr class="one">
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+                <tr>
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+                <tr class="one">
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+                <tr>
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+                <tr class="one">
+                    <td>国书</td>
+                    <td>明国藏书</td>
+                    <td>2020-08-05 12:30:30</td>
+                    <td>2020-08-05 17:30:30</td>
+                    <td>2,000</td>
+                    <td><a href="#" class="bidding">竞拍</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="last">
+            <table id="lastA">
+                <tr style="text-decoration: none">
+                    <td>
+                        <a href="#">首页</a>
+                    </td>
+                    <td>
+                        <a href="#">上一页</a>
+                    </td>
+                    <td>
+                        <a href="#">第5页</a>
+                    </td>
+                    <td>
+                        <a href="#">1</a>
+                    </td>
+                    <td>
+                        <a href="#">2</a>
+                    </td>
+                    <td>
+                        <a href="#">3</a>
+                    </td>
+                    <td>
+                        <a href="#">下一页</a>
+                    </td>
+                    <td>
+                        <a href="#">尾页</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

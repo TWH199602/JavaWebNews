@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜狗搜索引擎</title>
+    <link href="../../../../../../Downloads/web2/web/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <style type="text/css">
+        body {
+            background: #fff;
+            position: relative;
+            min-width: 1000px;
+            height: 100%;
+        }
+        body, button, input, select, textarea {
+            font-family: arial,'pingfang sc',stheiti,'microsoft yahei',sans-serif;
+            font-size: 13px;
+        }
+        body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .wrapper {
+            height: 100%;
+            min-height: 660px;
+            position: relative;
+            z-index: 10;
+        }
+        .header{
+
+            line-height: 24px;
+        }
+        .top-nav{
+            float: left;
+        }
+        .top-nav li {
+            float: left;
+            margin-left: 20px;
+        }
+        .top-nav li a{
+            color: rgba(0,0,0,.75);
+        }
+        .user-box {
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            font-size: 12px;
+        }
+        .local-weather {
+            float: left;
+        }
+        .local-weather .c6{
+            color: rgba(0,0,0,.75);
+        }
+        .user-enter {
+            float: left;
+        }
+        .user-enter .enter {
+            display: inline-block;
+            border-radius: 2px;
+            background: #fd6853;
+            color: #fff;
+            padding: 0 10px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- 页面整体div -->
+<div class="wrapper">
+    <!-- 头部div -->
+    <div class="header">
+        <!-- 头部左侧导航栏 -->
+        <div class="top-nav">
+            <ul>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">网页</a></li>
+                <li><a href="#">微信</a></li>
+                <li><a href="#">知乎</a></li>
+                <li><a href="#">图片</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">明医</a></li>
+                <li><a href="#">英文</a></li>
+                <li><a href="#">问问</a></li>
+                <li><a href="#">学术</a></li>
+                <li><a href="#">更多</a></li>
+            </ul>
+        </div>
+        <!-- 头部右侧 天气，登录 -->
+        <div class="user-box">
+            <div class="local-weather">
+                <div class="wea-box" id="cur-weather">
+                    <span class="c6">江苏	南京</span>
+                    <i>
+                        <img src="../../../../../../Downloads/web2/web/images/duoyun.png" width="16" height="16" title="多云" alt="多云">
+                    </i>
+                    <span class="c6">33°</span>
+                </div>
+                <div class="user-enter">
+                    <a href="#" id="show-card">显示卡片</a>
+                    <a href="#" class="enter" id="loginBtn">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索框 -->
+    <!-- 二维码 -->
+</div>
+</body>
+</html>
