@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <style type="text/css">
+        #div1 {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            /*background-color: red;*/
+            margin: 50px auto;
+        }
+
+        #title {
+            font-size: 30px;
+            text-align: left;
+            color: blue;
+        }
+
+        #body {
+            position: absolute;
+            top: 43px;
+            left: 25px;
+            width: 300px;
+            /*background-color: blueviolet;*/
+            text-align: right;
+            padding-right: 50px;
+        }
+
+        #check {
+            width: 50px;
+            height: 21px;
+        }
+
+        #doNotLook {
+            color: blue;
+            font-size: 10px;
+        }
+
+        #agree {
+            width: 14px;
+            height: 14px;
+        }
+
+        #submit {
+            margin-right: 55px;
+            width: 100px;
+            height: 40px;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            background-image: url("images/butto.jpg");
+        }
+
+        .redWord {
+            color: red;
+            font-size: 5px;
+            text-align: left;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        p {
+            padding: 0;
+            margin-right: 50px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        input {
+            width: 150px;
+            height: 21px;
+            margin-bottom: 3px;
+        }
+
+        #checkNo1 {
+            /*background-color: red;*/
+            width: 300px;
+            height: 27px;
+            margin-left: 21px;
+            padding: 0;
+        }
+
+        #checkNo1 div {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            float:left;
+        }
+
+    </style>
+
+</head>
+<body>
+<form>
+    <div id="div1">
+        <p id="title">用户注册</p>
+        <div id="body">
+            <div>
+                <p>*用户名：<input id="username" type="text" onblur="valuateName()"/>
+
+                <p class="redWord" id="nameTip"></p>
+
+                <p>*密码：<input id="pwd" type="password" onblur="valuatePwd()"/></p>
+
+                <p class="redWord" id="pwdTip"></p>
+
+                <p>*身份证号：<input id="UId" type="text" onblur="valuateUId()"/></p>
+
+                <p class="redWord" id="idTip"></p>
+
+                <p>*电话：<input id="phone" type="text" onblur="valuatePhone()"/></p>
+
+                <p class="redWord" id="phoneTip"></p>
+
+                <p>*住址：<input type="text"/></p>
+
+                <p>*邮政编码：<input type="text"/></p>
+            </div>
+
+            <div id="checkNo1">
+                <!--                <p style="margin-right: 14px;">-->
+                <!--                    *验证码：<input id="check" type="text"/>-->
+                <!--                    <img src="images/img2.jpg"/>-->
+                <!--                    <a href="" id="doNotLook">看不清</a>-->
+                <!--                </p>-->
+                <div>
+                    *验证码：<input id="check" type="text">
+                </div>
+                <div>
+                    <img src="images/img2.jpg">
+                </div>
+                <div>
+                    <a href="" id="doNotLook">看不清</a>
+                </div>
+            </div>
+
+            <div style="clear: both">
+                <p style="margin-right: 42px;">
+                    <input id="agree" type="checkbox" value=""/>
+                    我同意<a href="">《服务条款》</a>
+                </p>
+            </div>
+            <p>
+                <input id="submit" type="submit" value="立即注册"/>
+            </p>
+
+        </div>
+    </div>
+</form>
+
+<script>
+    function valuateName() {
+        var uName = document.getElementById("username").value;
+        var uNameIsTrue = /\w{6,}/.test(uName);
+        if (!uNameIsTrue) {
+            document.getElementById("nameTip").innerHTML = "用户名要求不低于6个字符";
+        } else {
+            document.getElementById("nameTip").innerHTML = "";
+        }
+    }
+
+    function valuatePwd() {
+        var pwd = document.getElementById("pwd").value;
+        var pwdIsTrue = /\w{6,}/.test(pwd);
+        if (!pwdIsTrue) {
+            document.getElementById("pwdTip").innerHTML = "密码要求不低于6个字符";
+        } else {
+            document.getElementById("pwdTip").innerHTML = "";
+        }
+    }
+
+    function valuateUId() {
+        var UId = document.getElementById("UId").value;
+        var UIdIsTrue = /\d{18}/.test(UId);
+        if (!UIdIsTrue) {
+            document.getElementById("idTip").innerHTML = "身份证号格式不对";
+        } else {
+            document.getElementById("idTip").innerHTML = "";
+        }
+    }
+
+    function valuatePhone() {
+        var phoneText = document.getElementById("phone").value;
+        var phoneIsTrue = /\d{11}/.test(phoneText);
+        if (!phoneIsTrue) {
+            document.getElementById("phoneTip").innerHTML = "电话号码格式不对";
+        } else {
+            document.getElementById("phoneTip").innerHTML = "";
+        }
+    }
+</script>
+
+</body>
+</html>
