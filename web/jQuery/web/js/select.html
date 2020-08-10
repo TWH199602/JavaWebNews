@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>全选全不选1(空白)</title>
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#checkedAllBtn").click(function(){
+                //①全选按钮：点击后所有爱好都选中       设置的属性值相同
+                $("input[name='items']").prop("checked" , true);//隐式迭代
+            });
+            $("#checkedNoBtn").click(function(){
+                //②全不选按钮：点击后所有爱好都不选中
+                $("input[name='items']").prop("checked" , false);//隐式迭代
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<form method="post" action="">
+
+    <br />
+    <input type="checkbox"  name="items" value="A" />A
+    <input type="checkbox" name="items" value="B" />B
+    <input type="checkbox" name="items" value="C" />C
+    <input type="checkbox" name="items" value="D" />D
+    <br />
+    <input type="button" id="checkedAllBtn" value="全　选" />
+    <input type="button" id="checkedNoBtn" value="全不选" />
+</form>
+
+</body>
+<html/>
