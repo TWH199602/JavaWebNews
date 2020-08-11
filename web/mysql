@@ -1,0 +1,49 @@
+    CREATE TABLE `拍卖品清单` (
+        `id`int NOT null,
+      `name` varchar(255) NOT NULL,
+      `desc` varchar(255) NOT NULL,
+      `start-time` datetime(6) NOT NULL,
+      `end-time` datetime(6) NOT NULL,
+      `price` int NOT NULL,
+        `reserve-price`int not null,
+        `isdone`INTEGER not null,
+      PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+    CREATE TABLE `出价记录` (
+        `id` int not null,
+      `auctiontime` datetime(6) NOT NULL,
+      `price` int NOT NULL,
+      `auctioner` varchar(255) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+    CREATE TABLE `完成竞拍清单` (
+      `bidder` varchar(255) NOT NULL,
+      `biddingtime` datetime(6) NOT NULL,
+      `price` int NOT NULL,
+      `id` int NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+    CREATE TABLE `用户信息` (
+      `name` varchar(255) NOT NULL,
+      `pwd` varchar(255) NOT NULL,
+        `idnum`int not null,
+        `phone`VARCHAR(11)not null,
+        `adress`VARCHAR(20)not null,
+        `postal`int not null,
+      PRIMARY KEY (`name`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+    CREATE TABLE `管理员登陆` (
+      `name` varchar(255) NOT NULL,
+      `pwd` varchar(255) NOT NULL,
+      PRIMARY KEY (`name`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
